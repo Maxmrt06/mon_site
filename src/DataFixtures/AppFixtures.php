@@ -25,7 +25,7 @@ class AppFixtures extends Fixture
             $user->setLastname($faker->lastName());
             $user->setEmail($faker->email());
             $user->setPassword($faker->password());
-            $user->setCreatedAt(new \DateTimeImmutable());
+            $user->setCreatedAt(new \DateTime());
             $manager->persist($user);
             $users[] = $user;
         }
@@ -45,7 +45,7 @@ class AppFixtures extends Fixture
             $article->setTitle($faker->text(50));
             $article->setContent($faker->text(6000));
             $article->setImage($faker->imageUrl());
-            $article->setCreatedAt(new \DateTimeImmutable());
+            $article->setCreatedAt(new \DateTime());
             $article->addCategory($categories[$faker->numberBetween(0,14)]);
             $article->setAuthor($users[$faker->numberBetween(0,49)]);
             $manager->persist($article);
