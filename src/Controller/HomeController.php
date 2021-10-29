@@ -21,7 +21,7 @@ class HomeController extends AbstractController
         $this->repoCategory = $repoCategory;
     }
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      */
     public function index(): Response   //permet a Symfony de charger les donnees de ArticleRepository dans $repoArticle
     {                                                                   // c'est une injection de dépendance
