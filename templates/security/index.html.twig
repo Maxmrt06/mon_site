@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'inscription{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+    <h1>{{ controller_name }}</h1>
+
+   {{ form_start(form) }}
+
+        <div class="row">
+            <div class="col-md-4">
+                {{ form_row(form.username, {'label': "Nom d'utilisateur : ", 'attr':{'placeholder':"Entrez votre nom d'utilisateur" }}) }}
+            </div>
+            <div class="col-md-4">
+                {{ form_row(form.firstname, {'label': "Prénom : ", 'attr':{'placeholder':"Entrez votre prénom" }}) }}
+            </div>
+            <div class="col-md-4">
+                {{ form_row(form.lastname, {'label': "Nom : ", 'attr':{'placeholder':"Entrez votre nom" }}) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                {{ form_row(form.email, {'label': "Email : ", 'attr':{'placeholder':"Entrez votre email" }}) }}
+            </div>
+            <div class="col-12">
+                {{ form_row(form.password, {'label': "Mot de passe : ", 'attr':{'placeholder':"Entrez votre mot de passe" }}) }}
+            </div>
+            <div class="col-12">
+                {{ form_row(form.passwordConfirm, {'label': "Confirmation Mot de passe : ", 'attr':{'placeholder':"Confirmez votre mot de passe" }}) }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3">S'enregistrer</button>
+
+   {{ form_end(form) }}
+
+</div>
+{% endblock %}
